@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Cruxinator\JitLoading\Tests;
 
 class ExampleTest extends TestCase
 {

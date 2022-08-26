@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Cruxinator\JitLoading\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class JitLoadingCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'jitloading';
 
     public $description = 'My command';
 

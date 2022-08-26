@@ -1,17 +1,18 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "cruxinator/jitloading",
+    "description": "Detect and dynamically repair Laravel model lazy-loads just-in-time",
     "keywords": [
-        ":vendor_name",
+        "cruxinator",
         "laravel",
-        ":package_slug"
+        "jitloading",
+        "just-in-time"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/cruxinator/jitloading",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Alex Goodwin",
+            "email": "cyberia.resurrection@gmail.com",
             "role": "Developer"
         }
     ],
@@ -31,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Cruxinator\\JitLoading\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Cruxinator\\JitLoading\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,15 +46,18 @@
         "test-coverage": "vendor/bin/phpunit --coverage-html=cover/"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Cruxinator\\JitLoading\\JitLoadingServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "JitLoading": "Cruxinator\\JitLoading\\Facades\\JitLoading"
             }
         }
     },
