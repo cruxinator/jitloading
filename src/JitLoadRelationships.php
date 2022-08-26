@@ -2,13 +2,13 @@
 
 namespace Cruxinator\JitLoading;
 
+use Cruxinator\JitLoading\Exceptions\JitLoadException;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 use LogicException;
-use Cruxinator\JitLoading\Exceptions\JitLoadException;
 
 /**
  * Trait JitLoadRelationships
@@ -89,6 +89,7 @@ trait JitLoadRelationships
 
         if ($this->strictEagerLoad()) {
             $message = 'Relationship '.static::class.'::'.$relationship.' was JIT-loaded.';
+
             throw new JitLoadException($message);
         }
 
